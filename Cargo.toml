@@ -1,0 +1,24 @@
+[package]
+name = "auto-absen"
+version = "0.1.0"
+authors = ["ibldzn <51160226+ibldzn@users.noreply.github.com>"]
+edition = "2021"
+description = "..."
+readme = "README.md"
+repository = "https://github.com/ibldzn/auto-absen"
+license = "MIT"
+keywords = []
+categories = []
+
+[dependencies]
+anyhow = "1.0"
+ureq = { version = "2.5", features = ["cookies"] }
+scraper = "0.13"
+
+[profile.release]
+strip = true
+lto = true
+debug = false
+panic = "abort"
+opt-level = 3
+codegen-units = 1
