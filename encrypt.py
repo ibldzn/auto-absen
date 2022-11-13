@@ -4,10 +4,7 @@ import sys
 
 
 def encrypt(passwd: str) -> str:
-    ret = []
-    for c in passwd:
-        ret.append(str(ord(c) ^ ord("A")))
-    return ",".join(ret)
+    return ",".join([str(ord(c) ^ ord("A")) for c in passwd])
 
 
 def main():
